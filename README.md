@@ -1,6 +1,10 @@
 # Conversor de Moedas
 
+![Vercel](https://vercelbadge.vercel.app/api/ppnunes/projetofinal2-match)
+
 Projeto voltado para Programa Match! projeto final 2.
+
+O projeto está disponível em https://projeto-final2.vercel.app/
 
 ## Requisitos pedidos:
 
