@@ -673,9 +673,14 @@ class ConversorMoedas:
         result = data.get(f"{code.upper()}{codein.upper()}", {}).get("bid", 1.0)
         return float(result)
 
-    def convert(self, code: str, codein: str, value: float, use_usd:float=False) -> float:
+    def convert(
+        self, code: str, codein: str, value: float, use_usd: float = False
+    ) -> float:
         """Convert a value from code to codein"""
-        entrada, saida = self._code_names[code.upper()], self._code_names[codein.upper()]
+        entrada, saida = (
+            self._code_names[code.upper()],
+            self._code_names[codein.upper()],
+        )
         if f"{code.upper()}-{codein.upper()}" not in self._codes_avaialble_:
             if self._test_rate_with_usd(code, codein) > 0 and use_usd:
                 print(
@@ -685,7 +690,9 @@ class ConversorMoedas:
                 result = value * self._test_rate_with_usd(code, codein)
                 return f"{codein.upper()} {result:.2f}"
 
-            print(f"Conversão {code.upper()}->{codein.upper()} indisponível. Use flag --use_usd/-u para forçar conversão usando USD como intermediário")
+            print(
+                f"Conversão {code.upper()}->{codein.upper()} indisponível. Use flag --use_usd/-u para forçar conversão usando USD como intermediário"
+            )
             return
         print(f"Convertendo {entrada} em {saida}")
         rate = self.get_rate(code, codein)
