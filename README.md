@@ -77,7 +77,7 @@ Retorna o valor convertido da `<MOEDA ORIGEM>` para `<MOEDA DESTINO>`. Caso a co
 
 ### WEB
 
-Foi utiliazada a biblioteca Flask como web framework. Instaladas as dependências, é possível executar o servidor com:
+Foi utilizada a biblioteca Flask como web framework. Instaladas as dependências, é possível executar o servidor com:
 
 ```bash
 flask run
